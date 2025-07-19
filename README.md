@@ -20,23 +20,23 @@ pip install pathvalidate
 
 ```python
 if __name__ == "__main__":
-    # 示例1: 通过摘要页面URL下载 (新格式)
-    download_arxiv_paper("https://arxiv.org/abs/2505.14030")
-    
-    # 示例2: 通过PDF URL下载 (新格式)
+    # 示例1: 通过PDF URL下载并获取标题
     download_arxiv_paper("https://arxiv.org/pdf/2505.14030")
     
-    # 示例3: 通过PDF URL下载 (旧格式兼容)
+    # 示例2: 通过PDF URL下载 (旧格式兼容)
     download_arxiv_paper("https://arxiv.org/pdf/2505.14030.pdf")
     
-    # 示例4: 仅提供论文ID
+    # 示例3: 仅提供论文ID
     download_arxiv_paper("2505.14030")
+    
+    # 示例4: 通过摘要页面URL下载
+    download_arxiv_paper("https://arxiv.org/abs/2505.14030")
     
     # 示例5: 自定义文件名和保存目录
     download_arxiv_paper(
-        "https://arxiv.org/abs/2505.14030",
+        "2505.14030",
         filename="quantum_computing_survey",
-        save_dir="~/Downloads/papers"
+        save_dir="/home/wu/code/papers"
     )
 ```
 
